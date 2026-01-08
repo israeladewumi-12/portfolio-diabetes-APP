@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+joblib
+
+# git add requirements.txt
+# git commit -m "Add requirements"
+# git push
