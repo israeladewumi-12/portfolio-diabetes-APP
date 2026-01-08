@@ -2,12 +2,11 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import joblib
+import os
 
-# (should fall around 0.35 – 0.55 probability)
-# Load trained objects
-rf_model = joblib.load(r"C:\portfolio1\project\rf_model.pkl")
-scaler = joblib.load(r"C:\portfolio1\project\scaler.pkl")
-
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "rf_model.pkl")
+rf_model = joblib.load(MODEL_PATH)
+scaler = joblib.load(os.path.join(os.path.dirname(__file__), "scaler.pkl"))
 
 st.sidebar.header("Enter Patient Data")
 def user_input_features():
